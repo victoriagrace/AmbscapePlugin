@@ -14,6 +14,7 @@
 #include "../JuceLibraryCode/JuceHeader.h"
 #include "PluginProcessor.h"
 
+#define NUMFRAMES 32
 
 //==============================================================================
 /**
@@ -26,6 +27,8 @@ public:
 
     //==============================================================================
     void paint (Graphics&) override;
+//    void repaint (Graphics&) ;
+
     void resized() override;
     
     void mouseDown(const MouseEvent &evt);
@@ -33,8 +36,22 @@ public:
 
     void mouseDrag(const MouseEvent &evt);
     float xPos;
+    float yPos;
+    float xPos2;
+    float yPos2;
+    
+    float xPosChord;
+    float yPosChord;
+    
+    float yPosLead;
+    
+    Image juceImage[NUMFRAMES];
+    Image juceImagePress[NUMFRAMES];
+    
 
 private:
+    float pull;
+
     // This reference is provided as a quick way for your editor to
     // access the processor object that created it.
     AmbscapePluginAudioProcessor& processor;
