@@ -42,8 +42,13 @@ public:
     
     float xPosChord;
     float yPosChord;
-    
     float yPosLead;
+    
+    float soprano;
+    float alto;
+    float tenor;
+    float bass;
+    
     
     Image juceImage[NUMFRAMES];
     Image juceImagePress[NUMFRAMES];

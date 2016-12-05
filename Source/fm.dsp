@@ -52,7 +52,10 @@ note_2 = hslider("note_2", 0, -12, 12, 1) : si.smooth(ba.tau2pole(0.01));
 
 vib = os.osc(6) * 0.1;
 
-lead = pulsetrain(ba.midikey2hz(lead_note - note_2 + vib * rot), scale(pull,0.01,0.99)):fi.lowpass(2, scale(pull, 200, 3000)) * gate;
+
+//lead = os.pulsetrain(ba.midikey2hz(lead_note + vib * rot), scale(pull,0.01,0.99)):fi.resonlp(scale(pull, 100, 2000),10,1): * gate;
+
+lead = os.pulsetrain(ba.midikey2hz(lead_note + vib * rot), scale(pull,0.01,0.99)):fi.lowpass(2, scale(rot, 200, 3000)) * gate;
 
 //lead = pulsetrain((ba.midikey2hz(note + vib * rot))*lead_note,scale(pull,0.01,0.99)):fi.lowpass(2, scale(pull, 2000, 8000)) * gate;
 
@@ -64,10 +67,23 @@ lead = pulsetrain(ba.midikey2hz(lead_note - note_2 + vib * rot), scale(pull,0.01
 findex = indx + scale(pull, 0, 3);
 
 
-drones = (pad(base, car, mod, findex)  + 
-pad(base + 7, car, mod, findex) + 
-pad(base + note_1, car, mod, findex) + 
-pad(base + 2, car, mod, findex) + 
-pad(base -12, car, mod, indx)) * gate_drones * 0.4;
+//drones = (pad(base, car, mod, findex)  + 
+//pad(base + 7, car, mod, findex) + 
+//pad(base + note_1, car, mod, findex) + 
+//pad(base + 2, car, mod, findex) + 
+//pad(base -12, car, mod, indx)) * gate_drones * 0.4;
 
-process = hgroup("fm", drones <:_,_);
+s = hslider("soprano", 69, 12, 100, 1): si.smoo;
+a = hslider("alto", 69, 12, 100, 1): si.smoo;
+t = hslider("tenor", 69, 12, 100, 1): si.smoo;
+b = hslider("bass", 69, 12, 100, 1): si.smoo;
+
+drones = (
+pad(s, car, mod, findex)  + 
+pad(a, car, mod, findex) + 
+pad(t, car, mod, findex) + 
+pad(b, car, mod, findex)) 
+
+* gate_drones * ba.db2linear(-15);
+
+process = hgroup("fm", drones + lead  <:_,_);

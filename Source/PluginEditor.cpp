@@ -24,6 +24,22 @@ static const int notes_2[] = {3, 5};
 static const int minor_scale[] = {0, 2, 3, 5, 7, 8, 11};
 static const int major_scale[] = {0, 2, 4, 5, 7, 9, 11};
 
+static const int sopranoTable[] = {59, 60, 61, 61, 61, 59};
+static const int altoTable[] = {56, 56, 56, 57, 57, 54};
+static const int tenorTable[] = {40, 39, 40, 40, 37, 39};
+static const int bassTable[] = {35, 24, 25, 33, 42, 33};
+
+static const int scaleTable[][4] = {
+    {35, 40, 56, 59},
+    {24, 39, 56, 60},
+    {25, 40, 56, 61},
+    {33, 40, 57, 61},
+    {42, 37, 57, 61},
+    {33, 39, 54, 59},
+};
+
+
+//static const int chord[] =
 //==============================================================================
 AmbscapePluginAudioProcessorEditor::AmbscapePluginAudioProcessorEditor (AmbscapePluginAudioProcessor& p)
     : AudioProcessorEditor (&p), processor (p)
@@ -136,7 +152,7 @@ void AmbscapePluginAudioProcessorEditor::mouseDrag(const MouseEvent &evt)
         rot= (rot+1.0)*0.5;
     }
     
-    std::cout << "x: " << x << "\n";
+    //std::cout << "x: " << x << "\n";
     
 //    int xposition= getMouseDownScreenX();
     
@@ -150,6 +166,7 @@ void AmbscapePluginAudioProcessorEditor::mouseDrag(const MouseEvent &evt)
    
     processor.setParam("/fm/pull",pull);
     processor.setParam("/fm/rotation",rot);
+    //std::cout << "rotation: " << rot << "\n";
     
   //  processor.setParam("/fm/freq",ambNote);
  //  processor.setParam("/fm/lead",leadNote);
@@ -166,12 +183,30 @@ void AmbscapePluginAudioProcessorEditor::mouseDrag(const MouseEvent &evt)
     xPos2 = evt.getMouseDownX();
     yPos2 = evt.getMouseDownY();
     
-    
     yPosChord = minor_scale[(int)floor(((float)evt.getMouseDownY() / area.getHeight()) * 7)];
     yPosLead = notes_2[(int)floor(((float)evt.getMouseDownX() / area.getWidth()) * 2)];
 
-    processor.setParam("/fm/note_1", yPosChord);
-    processor.setParam("/fm/note_2", yPosLead);
+//    processor.setParam("/fm/note_1", yPosChord);
+//    processor.setParam("/fm/note_2", yPosLead);
+//    
+    
+    int chordNumber =(int)floor(((float)evt.getMouseDownX()/area.getWidth())*6);
+    int scaleNumber = (int)floor(rot * 4);
+    processor.setParam("/fm/lead", scaleTable[chordNumber][scaleNumber]+12);
+    
+    soprano= sopranoTable[chordNumber];
+    alto= altoTable[chordNumber];
+    tenor= tenorTable[chordNumber];
+    bass= bassTable[chordNumber];
+    
+    
+    processor.setParam("/fm/soprano", soprano );
+    processor.setParam("/fm/alto", alto );
+    processor.setParam("/fm/tenor", tenor );
+    processor.setParam("/fm/bass", bass );
+    
+    //std::cout << soprano << "\n";
+    
     
     repaint();
 
