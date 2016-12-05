@@ -24,18 +24,18 @@ static const int notes_2[] = {3, 5};
 static const int minor_scale[] = {0, 2, 3, 5, 7, 8, 11};
 static const int major_scale[] = {0, 2, 4, 5, 7, 9, 11};
 
-static const int sopranoTable[] = {59, 60, 61, 61, 61, 59};
+static const int sopranoTable[] = {59, 60, 61, 61, 61, 60};
 static const int altoTable[] = {56, 56, 56, 57, 57, 54};
 static const int tenorTable[] = {40, 39, 40, 40, 37, 39};
-static const int bassTable[] = {35, 24, 25, 33, 42, 33};
+static const int bassTable[] = {35, 24, 25, 33, 42, 34};
 
 static const int scaleTable[][4] = {
     {56, 52, 49, 47},
-    {56, 54, 51, 48},
-    {37, 40, 56, 61},
-    {45, 40, 57, 61},
-    {54, 37, 57, 61},
-    {45, 39, 54, 59},
+    {36, 54, 51, 48},
+    {56, 52, 51, 48},
+    {61, 59, 57, 52},
+    {57, 56, 54, 49},
+    {57, 54, 51, 48},
 };
 
 
