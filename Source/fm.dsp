@@ -52,12 +52,12 @@ note_2 = hslider("note_2", 0, -12, 12, 1) : si.smooth(ba.tau2pole(0.01));
 
 vib = os.osc(6) * 0.1;
 
+//lead = os.pulsetrain(ba.midikey2hz(lead_note + vib * rot), scale(pull,0.01,0.99)):fi.lowpass(2, scale(pull, 200, 3000)) * gate;
+lead = os.osc(ba.midikey2hz(lead_note + vib * rot)):fi.lowpass(2, scale(1-pull, 200, 3000)) *pull*gate;
 
-//lead = os.pulsetrain(ba.midikey2hz(lead_note + vib * rot), scale(pull,0.01,0.99)):fi.resonlp(scale(pull, 100, 2000),10,1): * gate;
+//scale(rot, 200, 3000)
 
-lead = os.pulsetrain(ba.midikey2hz(lead_note + vib * rot), scale(pull,0.01,0.99)):fi.lowpass(2, scale(rot, 200, 3000)) * gate;
-
-//lead = pulsetrain((ba.midikey2hz(note + vib * rot))*lead_note,scale(pull,0.01,0.99)):fi.lowpass(2, scale(pull, 2000, 8000)) * gate;
+//lead = pulsetrain((ba.midikey2hz(note + vib * rot))*lead_note,scale(pull,0.01,0.99)):fi.lowpass(2, scale(pull, 2000, 8000))  *gate;
 
 //lead = os.pulsetrain(300,duty):fi.lowpass(2,fc);
 //duty = hslider("amp", 0.1, 0.01, 0.99, 0.01): si.smoo;
