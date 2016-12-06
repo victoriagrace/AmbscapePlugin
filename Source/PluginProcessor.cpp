@@ -15,7 +15,7 @@
 //==============================================================================
 AmbscapePluginAudioProcessor::AmbscapePluginAudioProcessor()
 {
-    addParameter(pull = new AudioParameterFloat("/fm/pull", "Frequency", 0.0f, 8000.0f, 1000.f));
+    addParameter(pull = new AudioParameterFloat("/fm/pull", "Frequency", 0.0f, 1.0f, 1.f));
    
 }
 

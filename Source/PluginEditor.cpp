@@ -27,13 +27,13 @@ static const int major_scale[] = {0, 2, 4, 5, 7, 9, 11};
 static const int sopranoTable[] = {59, 60, 61, 61, 61, 60};
 static const int altoTable[] = {56, 56, 56, 57, 57, 54};
 static const int tenorTable[] = {40, 39, 40, 40, 37, 39};
-static const int bassTable[] = {35, 24, 25, 33, 42, 34};
+static const int bassTable[] = {35, 36, 37, 33, 42, 34};
 
 static const int scaleTable[][4] = {
     {56, 52, 49, 47},
-    {36, 54, 51, 48},
+    {60, 54, 51, 48},
     {56, 52, 51, 48},
-    {61, 59, 57, 52},
+    {61, 59, 57, 56},
     {57, 56, 54, 49},
     {57, 54, 51, 48},
 };
@@ -204,6 +204,7 @@ void AmbscapePluginAudioProcessorEditor::mouseDrag(const MouseEvent &evt)
     processor.setParam("/fm/alto", alto );
     processor.setParam("/fm/tenor", tenor );
     processor.setParam("/fm/bass", bass );
+    
     
     //std::cout << soprano << "\n";
     

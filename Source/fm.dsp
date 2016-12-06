@@ -1,5 +1,5 @@
 import("stdfaust.lib");
-//import("oscillator.lib");
+import("oscillator.lib");
 //freq = 440;
 //amp = 0.1;
 //
@@ -30,14 +30,17 @@ indx = hslider("indx", 1, 0, 20, 0.01): si.smoo;
 //indx=1;
 amp = hslider("amp", 0.3, 0, 1, 0.01): si.smoo;
 
-lead_note = hslider("lead", 69, 12, 100, 1): si.smooth(ba.tau2pole(0.1));
+lead_note = hslider("lead", 69, 12, 100, 1): si.smooth(ba.tau2pole(0.08));
 
 my_lfo(freq) = 1 + os.osc(freq) * 0.5;
 
-pull = hslider("pull", 0, 0, 1, 0.001) : si.smoo;
+pull_sig = hslider("pull", 0, 0, 1, 0.001);
+pull = pull_sig : si.smoo;
+pull_slo = pull_sig : si.smooth(ba.tau2pole(1));
 rot = hslider("rotation", 0, 0, 1, 0.001) : si.smoo;
 xPos = hslider("xPos", 0, 0, 1, 0.001) : si.smoo;
 yPos = hslider("yPos", 0, 0, 1, 0.001) : si.smoo;
+
 
 scale(val, vmin, vmax) = val * (vmax - vmin) + vmin;
 
@@ -45,7 +48,7 @@ scale(val, vmin, vmax) = val * (vmax - vmin) + vmin;
 
 gate_sig = checkbox("gate");
 gate = gate_sig : si.smooth(ba.tau2pole(0.45));
-gate_drones = gate_sig : si.smooth(ba.tau2pole(1.0));
+gate_drones = gate_sig : si.smooth(ba.tau2pole(1.5));
 
 note_1 = hslider("note_1", 11, 0, 12, 1) : si.smooth(ba.tau2pole(0.01));
 note_2 = hslider("note_2", 0, -12, 12, 1) : si.smooth(ba.tau2pole(0.01));
@@ -53,7 +56,10 @@ note_2 = hslider("note_2", 0, -12, 12, 1) : si.smooth(ba.tau2pole(0.01));
 vib = os.osc(6) * 0.1;
 
 //lead = os.pulsetrain(ba.midikey2hz(lead_note + vib * rot), scale(pull,0.01,0.99)):fi.lowpass(2, scale(pull, 200, 3000)) * gate;
-lead = os.osc(ba.midikey2hz(lead_note + vib * rot)):fi.lowpass(2, scale(1-pull, 200, 3000)) *pull*gate;
+
+lfomod2 = (1 + os.osc(0.5)) * 0.2;
+
+lead = os.osc(ba.midikey2hz(lead_note + vib * rot)):fi.lowpass(2, scale(1-pull, 200, 3000))*(lfomod2 +pull)*gate;
 
 //scale(rot, 200, 3000)
 
@@ -82,8 +88,29 @@ drones = (
 pad(s, car, mod, findex)  + 
 pad(a, car, mod, findex) + 
 pad(t, car, mod, findex) + 
-pad(b, car, mod, findex)) 
+pad(b, car, mod, findex * 4) +
+pad(b - 12, car, mod, findex)
 
-* gate_drones * ba.db2linear(-15);
+) 
 
-process = hgroup("fm", drones + lead  <:_,_);
+* gate_drones * ba.db2linear(-10);
+
+glass(f) = no.noise * 0.1 : fi.resonbp(f, 40, 0.8) : fi.resonbp(f, 40, 0.9) 
++ (os.osc(f) * 0.2);
+
+glasslead = (glass(ba.midikey2hz(lead_note)) + glass(ba.midikey2hz(lead_note + 12))) + 
+
+fmosc(ba.midikey2hz(lead_note + os.osc(6) * 0.1 * pull + (os.osc(3.01) * 0.1 * rot) ), 0.5, 4, 2, 0.1 + 1.5 * lfomod) : 
+fi.highpass(2, 1000) : fi.lowpass(2,4000) * gate * pull * ba.db2linear(-9)
+with {
+lfomod = (1 + os.osc(1.0/15.0)) * 0.5;
+};
+
+drySig = drones + glasslead;
+
+reverb = drySig : fi.highpass(2, 60) <: _, _ : re.zita_rev1_stereo(10, 300, 8000, 6, 8, 96000) : 
+
+_ * pull_slo * 0.5 + drySig * (1 - pull_slo), 
+_ * pull_slo * 0.5 + drySig * (1 - pull_slo);
+
+process = hgroup("fm", reverb);
