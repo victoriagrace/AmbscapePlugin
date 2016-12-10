@@ -47,8 +47,8 @@ scale(val, vmin, vmax) = val * (vmax - vmin) + vmin;
 //lead = os.pulsetrain(ba.midikey2hz(74),0.25):fi.lowpass(2,2000);
 
 gate_sig = checkbox("gate");
-gate = gate_sig : si.smooth(ba.tau2pole(0.45));
-gate_drones = gate_sig : si.smooth(ba.tau2pole(1.5));
+gate = gate_sig : si.smooth(ba.tau2pole(0.55));
+gate_drones = gate_sig : si.smooth(ba.tau2pole(1.6));
 
 note_1 = hslider("note_1", 11, 0, 12, 1) : si.smooth(ba.tau2pole(0.01));
 note_2 = hslider("note_2", 0, -12, 12, 1) : si.smooth(ba.tau2pole(0.01));
@@ -101,12 +101,12 @@ glass(f) = no.noise * 0.1 : fi.resonbp(f, 40, 0.8) : fi.resonbp(f, 40, 0.9)
 glasslead = (glass(ba.midikey2hz(lead_note)) + glass(ba.midikey2hz(lead_note + 12))) + 
 
 fmosc(ba.midikey2hz(lead_note + os.osc(6) * 0.1 * pull + (os.osc(3.01) * 0.1 * rot) ), 0.5, 4, 2, 0.1 + 1.5 * lfomod) : 
-fi.highpass(2, 1000) : fi.lowpass(2,4000) * gate * pull * ba.db2linear(-9)
+fi.highpass(2, 1000) : fi.lowpass(2,4000) * gate * (pull)* ba.db2linear(-8)
 with {
-lfomod = (1 + os.osc(1.0/15.0)) * 0.5;
+lfomod = (1 + os.osc(1.0/16.0)) * 0.6;
 };
 
-drySig = drones + glasslead;
+drySig = drones + (glasslead*pull/0.8);
 
 reverb = drySig : fi.highpass(2, 60) <: _, _ : re.zita_rev1_stereo(10, 300, 8000, 6, 8, 96000) : 
 

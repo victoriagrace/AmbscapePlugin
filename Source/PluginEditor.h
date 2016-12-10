@@ -14,7 +14,7 @@
 #include "../JuceLibraryCode/JuceHeader.h"
 #include "PluginProcessor.h"
 
-#define NUMFRAMES 32
+#define NUMFRAMES 64
 
 //==============================================================================
 /**

@@ -20,6 +20,188 @@
             file="Source/PluginEditor.cpp"/>
       <FILE id="d4FxR1" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
     </GROUP>
+    <FILE id="sXKrgx" name="ball_0.png" compile="1" resource="0" file="Source/res/ball_0.png"/>
+    <FILE id="GKkn2V" name="ball_1.png" compile="1" resource="0" file="Source/res/ball_1.png"/>
+    <FILE id="bsWMWh" name="ball_2.png" compile="1" resource="0" file="Source/res/ball_2.png"/>
+    <FILE id="LkuMCw" name="ball_3.png" compile="1" resource="0" file="Source/res/ball_3.png"/>
+    <FILE id="F5ZAfE" name="ball_4.png" compile="1" resource="0" file="Source/res/ball_4.png"/>
+    <FILE id="CF5KBC" name="ball_5.png" compile="1" resource="0" file="Source/res/ball_5.png"/>
+    <FILE id="ORBan4" name="ball_6.png" compile="1" resource="0" file="Source/res/ball_6.png"/>
+    <FILE id="i0t2f7" name="ball_7.png" compile="1" resource="0" file="Source/res/ball_7.png"/>
+    <FILE id="gxdTav" name="ball_8.png" compile="0" resource="0" file="Source/res/ball_8.png"/>
+    <FILE id="Q8TCQf" name="ball_9.png" compile="0" resource="1" file="Source/res/ball_9.png"/>
+    <FILE id="LokrOK" name="ball_10.png" compile="0" resource="1" file="Source/res/ball_10.png"/>
+    <FILE id="coiksz" name="ball_11.png" compile="0" resource="1" file="Source/res/ball_11.png"/>
+    <FILE id="rRWTNg" name="ball_12.png" compile="0" resource="1" file="Source/res/ball_12.png"/>
+    <FILE id="Os3kgQ" name="ball_13.png" compile="0" resource="1" file="Source/res/ball_13.png"/>
+    <FILE id="BEDHpL" name="ball_14.png" compile="0" resource="1" file="Source/res/ball_14.png"/>
+    <FILE id="gXi3S3" name="ball_15.png" compile="0" resource="1" file="Source/res/ball_15.png"/>
+    <FILE id="lcSYFy" name="ball_16.png" compile="0" resource="1" file="Source/res/ball_16.png"/>
+    <FILE id="bZ1dYE" name="ball_17.png" compile="0" resource="1" file="Source/res/ball_17.png"/>
+    <FILE id="GB8Q6b" name="ball_18.png" compile="0" resource="1" file="Source/res/ball_18.png"/>
+    <FILE id="TBBA7T" name="ball_19.png" compile="0" resource="1" file="Source/res/ball_19.png"/>
+    <FILE id="PPJcvF" name="ball_20.png" compile="0" resource="1" file="Source/res/ball_20.png"/>
+    <FILE id="QeTlOU" name="ball_21.png" compile="0" resource="1" file="Source/res/ball_21.png"/>
+    <FILE id="EOFomP" name="ball_22.png" compile="0" resource="1" file="Source/res/ball_22.png"/>
+    <FILE id="ADRTCJ" name="ball_23.png" compile="0" resource="1" file="Source/res/ball_23.png"/>
+    <FILE id="HXnugl" name="ball_24.png" compile="0" resource="1" file="Source/res/ball_24.png"/>
+    <FILE id="qL0s37" name="ball_25.png" compile="0" resource="1" file="Source/res/ball_25.png"/>
+    <FILE id="dtRfz2" name="ball_26.png" compile="0" resource="1" file="Source/res/ball_26.png"/>
+    <FILE id="nuOPyl" name="ball_27.png" compile="0" resource="1" file="Source/res/ball_27.png"/>
+    <FILE id="mM7gnV" name="ball_28.png" compile="0" resource="1" file="Source/res/ball_28.png"/>
+    <FILE id="tFma6g" name="ball_29.png" compile="0" resource="1" file="Source/res/ball_29.png"/>
+    <FILE id="jZ6J6E" name="ball_30.png" compile="0" resource="1" file="Source/res/ball_30.png"/>
+    <FILE id="fLHRui" name="ball_31.png" compile="0" resource="1" file="Source/res/ball_31.png"/>
+    <FILE id="F7JIeu" name="ball_32.png" compile="0" resource="1" file="Source/res/ball_32.png"/>
+    <FILE id="WgkNso" name="ball_33.png" compile="0" resource="1" file="Source/res/ball_33.png"/>
+    <FILE id="NRmJ0c" name="ball_34.png" compile="0" resource="1" file="Source/res/ball_34.png"/>
+    <FILE id="oIZQ8x" name="ball_35.png" compile="0" resource="1" file="Source/res/ball_35.png"/>
+    <FILE id="q4qNb5" name="ball_36.png" compile="0" resource="1" file="Source/res/ball_36.png"/>
+    <FILE id="gxTUVq" name="ball_37.png" compile="0" resource="1" file="Source/res/ball_37.png"/>
+    <FILE id="HjJcLe" name="ball_38.png" compile="0" resource="1" file="Source/res/ball_38.png"/>
+    <FILE id="DJr92V" name="ball_39.png" compile="0" resource="1" file="Source/res/ball_39.png"/>
+    <FILE id="kZSyql" name="ball_40.png" compile="0" resource="1" file="Source/res/ball_40.png"/>
+    <FILE id="Owx3Kx" name="ball_41.png" compile="0" resource="1" file="Source/res/ball_41.png"/>
+    <FILE id="RbAXrs" name="ball_42.png" compile="0" resource="1" file="Source/res/ball_42.png"/>
+    <FILE id="LPgwJy" name="ball_43.png" compile="0" resource="1" file="Source/res/ball_43.png"/>
+    <FILE id="FI6Spx" name="ball_44.png" compile="0" resource="1" file="Source/res/ball_44.png"/>
+    <FILE id="cYEqTc" name="ball_45.png" compile="0" resource="1" file="Source/res/ball_45.png"/>
+    <FILE id="xrq6QO" name="ball_46.png" compile="0" resource="1" file="Source/res/ball_46.png"/>
+    <FILE id="zGUweC" name="ball_47.png" compile="0" resource="1" file="Source/res/ball_47.png"/>
+    <FILE id="L3hiuT" name="ball_48.png" compile="0" resource="1" file="Source/res/ball_48.png"/>
+    <FILE id="FMEGza" name="ball_49.png" compile="0" resource="1" file="Source/res/ball_49.png"/>
+    <FILE id="AUAXws" name="ball_50.png" compile="0" resource="1" file="Source/res/ball_50.png"/>
+    <FILE id="CJVTLb" name="ball_51.png" compile="0" resource="1" file="Source/res/ball_51.png"/>
+    <FILE id="uEkCw3" name="ball_52.png" compile="0" resource="1" file="Source/res/ball_52.png"/>
+    <FILE id="UAjtWr" name="ball_53.png" compile="0" resource="1" file="Source/res/ball_53.png"/>
+    <FILE id="XkW5nl" name="ball_54.png" compile="0" resource="1" file="Source/res/ball_54.png"/>
+    <FILE id="yUum4e" name="ball_55.png" compile="0" resource="1" file="Source/res/ball_55.png"/>
+    <FILE id="Mn9ZbQ" name="ball_56.png" compile="0" resource="1" file="Source/res/ball_56.png"/>
+    <FILE id="diY7uA" name="ball_57.png" compile="0" resource="1" file="Source/res/ball_57.png"/>
+    <FILE id="YpXckK" name="ball_58.png" compile="0" resource="1" file="Source/res/ball_58.png"/>
+    <FILE id="CBsOp8" name="ball_59.png" compile="0" resource="1" file="Source/res/ball_59.png"/>
+    <FILE id="X0mhao" name="ball_60.png" compile="0" resource="1" file="Source/res/ball_60.png"/>
+    <FILE id="dGV6ZT" name="ball_61.png" compile="0" resource="1" file="Source/res/ball_61.png"/>
+    <FILE id="bJXWq5" name="ball_62.png" compile="0" resource="1" file="Source/res/ball_62.png"/>
+    <FILE id="wbF5lx" name="ball_63.png" compile="0" resource="1" file="Source/res/ball_63.png"/>
+    <FILE id="rb3kzn" name="ball_pull_0.png" compile="0" resource="1" file="Source/res/ball_pull_0.png"/>
+    <FILE id="q25XWx" name="ball_pull_1.png" compile="0" resource="1" file="Source/res/ball_pull_1.png"/>
+    <FILE id="Z4LAZN" name="ball_pull_2.png" compile="0" resource="1" file="Source/res/ball_pull_2.png"/>
+    <FILE id="dUavH5" name="ball_pull_3.png" compile="0" resource="1" file="Source/res/ball_pull_3.png"/>
+    <FILE id="v4W6yO" name="ball_pull_4.png" compile="0" resource="1" file="Source/res/ball_pull_4.png"/>
+    <FILE id="U1pGfz" name="ball_pull_5.png" compile="0" resource="1" file="Source/res/ball_pull_5.png"/>
+    <FILE id="JAmIN7" name="ball_pull_6.png" compile="0" resource="1" file="Source/res/ball_pull_6.png"/>
+    <FILE id="ekV6TQ" name="ball_pull_7.png" compile="0" resource="1" file="Source/res/ball_pull_7.png"/>
+    <FILE id="EEZZRN" name="ball_pull_8.png" compile="0" resource="1" file="Source/res/ball_pull_8.png"/>
+    <FILE id="L1aVna" name="ball_pull_9.png" compile="0" resource="1" file="Source/res/ball_pull_9.png"/>
+    <FILE id="I5JGzY" name="ball_pull_10.png" compile="0" resource="1"
+          file="Source/res/ball_pull_10.png"/>
+    <FILE id="SkfLej" name="ball_pull_11.png" compile="0" resource="1"
+          file="Source/res/ball_pull_11.png"/>
+    <FILE id="ryO9xb" name="ball_pull_12.png" compile="0" resource="1"
+          file="Source/res/ball_pull_12.png"/>
+    <FILE id="DJ0EK7" name="ball_pull_13.png" compile="0" resource="1"
+          file="Source/res/ball_pull_13.png"/>
+    <FILE id="cPUh49" name="ball_pull_14.png" compile="0" resource="1"
+          file="Source/res/ball_pull_14.png"/>
+    <FILE id="iV0yMw" name="ball_pull_15.png" compile="0" resource="1"
+          file="Source/res/ball_pull_15.png"/>
+    <FILE id="uGVclR" name="ball_pull_16.png" compile="0" resource="1"
+          file="Source/res/ball_pull_16.png"/>
+    <FILE id="VyEypN" name="ball_pull_17.png" compile="0" resource="1"
+          file="Source/res/ball_pull_17.png"/>
+    <FILE id="aluJsY" name="ball_pull_18.png" compile="0" resource="1"
+          file="Source/res/ball_pull_18.png"/>
+    <FILE id="rqrMOz" name="ball_pull_19.png" compile="0" resource="1"
+          file="Source/res/ball_pull_19.png"/>
+    <FILE id="grJhJY" name="ball_pull_20.png" compile="0" resource="1"
+          file="Source/res/ball_pull_20.png"/>
+    <FILE id="ItWGee" name="ball_pull_21.png" compile="0" resource="1"
+          file="Source/res/ball_pull_21.png"/>
+    <FILE id="K9KDrS" name="ball_pull_22.png" compile="0" resource="1"
+          file="Source/res/ball_pull_22.png"/>
+    <FILE id="mfXlGd" name="ball_pull_23.png" compile="0" resource="1"
+          file="Source/res/ball_pull_23.png"/>
+    <FILE id="GETDtW" name="ball_pull_24.png" compile="0" resource="1"
+          file="Source/res/ball_pull_24.png"/>
+    <FILE id="INdZnT" name="ball_pull_25.png" compile="0" resource="1"
+          file="Source/res/ball_pull_25.png"/>
+    <FILE id="EsGZuM" name="ball_pull_26.png" compile="0" resource="1"
+          file="Source/res/ball_pull_26.png"/>
+    <FILE id="NZBcS4" name="ball_pull_27.png" compile="0" resource="1"
+          file="Source/res/ball_pull_27.png"/>
+    <FILE id="JHAqeU" name="ball_pull_28.png" compile="0" resource="1"
+          file="Source/res/ball_pull_28.png"/>
+    <FILE id="JMChLG" name="ball_pull_29.png" compile="0" resource="1"
+          file="Source/res/ball_pull_29.png"/>
+    <FILE id="Wi5U6a" name="ball_pull_30.png" compile="0" resource="1"
+          file="Source/res/ball_pull_30.png"/>
+    <FILE id="a3ZXlD" name="ball_pull_31.png" compile="0" resource="1"
+          file="Source/res/ball_pull_31.png"/>
+    <FILE id="hQq8bY" name="ball_pull_32.png" compile="0" resource="1"
+          file="Source/res/ball_pull_32.png"/>
+    <FILE id="PhUYYv" name="ball_pull_33.png" compile="0" resource="1"
+          file="Source/res/ball_pull_33.png"/>
+    <FILE id="KUZePU" name="ball_pull_34.png" compile="0" resource="1"
+          file="Source/res/ball_pull_34.png"/>
+    <FILE id="mhdQwL" name="ball_pull_35.png" compile="0" resource="1"
+          file="Source/res/ball_pull_35.png"/>
+    <FILE id="lmfsUL" name="ball_pull_36.png" compile="0" resource="1"
+          file="Source/res/ball_pull_36.png"/>
+    <FILE id="Z5T9aw" name="ball_pull_37.png" compile="0" resource="1"
+          file="Source/res/ball_pull_37.png"/>
+    <FILE id="oAnMQx" name="ball_pull_38.png" compile="0" resource="1"
+          file="Source/res/ball_pull_38.png"/>
+    <FILE id="N8s7Eh" name="ball_pull_39.png" compile="0" resource="1"
+          file="Source/res/ball_pull_39.png"/>
+    <FILE id="ZinBqG" name="ball_pull_40.png" compile="0" resource="1"
+          file="Source/res/ball_pull_40.png"/>
+    <FILE id="stGR03" name="ball_pull_41.png" compile="0" resource="1"
+          file="Source/res/ball_pull_41.png"/>
+    <FILE id="AIacCP" name="ball_pull_42.png" compile="0" resource="1"
+          file="Source/res/ball_pull_42.png"/>
+    <FILE id="Hiw4MZ" name="ball_pull_43.png" compile="0" resource="1"
+          file="Source/res/ball_pull_43.png"/>
+    <FILE id="yaVUSI" name="ball_pull_44.png" compile="0" resource="1"
+          file="Source/res/ball_pull_44.png"/>
+    <FILE id="O6TMMN" name="ball_pull_45.png" compile="0" resource="1"
+          file="Source/res/ball_pull_45.png"/>
+    <FILE id="rXeqDG" name="ball_pull_46.png" compile="0" resource="1"
+          file="Source/res/ball_pull_46.png"/>
+    <FILE id="HX76WQ" name="ball_pull_47.png" compile="0" resource="1"
+          file="Source/res/ball_pull_47.png"/>
+    <FILE id="midQrn" name="ball_pull_48.png" compile="0" resource="1"
+          file="Source/res/ball_pull_48.png"/>
+    <FILE id="OAmz01" name="ball_pull_49.png" compile="0" resource="1"
+          file="Source/res/ball_pull_49.png"/>
+    <FILE id="EV9Mux" name="ball_pull_50.png" compile="0" resource="1"
+          file="Source/res/ball_pull_50.png"/>
+    <FILE id="DOgTEK" name="ball_pull_51.png" compile="0" resource="1"
+          file="Source/res/ball_pull_51.png"/>
+    <FILE id="aBRIlq" name="ball_pull_52.png" compile="0" resource="1"
+          file="Source/res/ball_pull_52.png"/>
+    <FILE id="Ouuw50" name="ball_pull_53.png" compile="0" resource="1"
+          file="Source/res/ball_pull_53.png"/>
+    <FILE id="Ue3Pdl" name="ball_pull_54.png" compile="0" resource="1"
+          file="Source/res/ball_pull_54.png"/>
+    <FILE id="tb77qZ" name="ball_pull_55.png" compile="0" resource="1"
+          file="Source/res/ball_pull_55.png"/>
+    <FILE id="ypj2Et" name="ball_pull_56.png" compile="0" resource="1"
+          file="Source/res/ball_pull_56.png"/>
+    <FILE id="bcjIgz" name="ball_pull_57.png" compile="0" resource="1"
+          file="Source/res/ball_pull_57.png"/>
+    <FILE id="YVJbn1" name="ball_pull_58.png" compile="0" resource="1"
+          file="Source/res/ball_pull_58.png"/>
+    <FILE id="rt3JMC" name="ball_pull_59.png" compile="0" resource="1"
+          file="Source/res/ball_pull_59.png"/>
+    <FILE id="KhfZAn" name="ball_pull_60.png" compile="0" resource="1"
+          file="Source/res/ball_pull_60.png"/>
+    <FILE id="qBUFeE" name="ball_pull_61.png" compile="0" resource="1"
+          file="Source/res/ball_pull_61.png"/>
+    <FILE id="xUupcz" name="ball_pull_62.png" compile="0" resource="1"
+          file="Source/res/ball_pull_62.png"/>
+    <FILE id="SnBzD7" name="ball_pull_63.png" compile="0" resource="1"
+          file="Source/res/ball_pull_63.png"/>
   </MAINGROUP>
   <EXPORTFORMATS>
     <XCODE_MAC targetFolder="Builds/MacOSX">
